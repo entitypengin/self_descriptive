@@ -23,9 +23,10 @@ def is_self_descriptive(x):
     return False
 
 
-for num in (2_019, 2_020, 6_210_001_000):
-    print(f"{num} {'is' if is_self_descriptive(num) else 'is not'} self descriptive")
+if __name__ == "__main__":
+    for num in (2_019, 2_020, 6_210_001_000):
+        print(f"{num} {'is' if is_self_descriptive(num) else 'is not'} self descriptive")
 
-# 2019 is not self descriptive
-# 2020 is self descriptive
-# 6210001000 is self descriptive
+    # 2019 is not self descriptive
+    # 2020 is self descriptive
+    # 6210001000 is self descriptive
