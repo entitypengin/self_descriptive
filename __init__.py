@@ -5,15 +5,15 @@
 from math import *
 
 
-def int_to_tuple(x):
-    result = []
+def int_to_tuple(x: int) -> tuple[int]:
+    result = ()
     d = floor(log10(x))
     for i in range(d + 1):
-        result = [x % 10 ** (i + 1) // 10 ** i] + result
+        result = (x % 10 ** (i + 1) // 10 ** i,) + result
     return result
 
 
-def is_self_descriptive(x):
+def is_self_descriptive(x: int) -> bool:
     tup = int_to_tuple(x)
     for i in tup:
         if tup[i] != tup.count(i):
